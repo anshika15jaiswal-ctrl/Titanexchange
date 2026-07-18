@@ -1,26 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up - Titan Exchange</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Titan Exchange</h1>
+</header>
+
+<div style="max-width:400px;margin:60px auto;background:#1f2937;padding:20px;border-radius:10px;">
+
 <h2 style="text-align:center;">Create Account</h2>
 
-<input type="text" placeholder="Full Name"
+<form action="dashboard.html">
+
+<input type="text" placeholder="Full Name" required
 style="width:100%;padding:12px;margin-top:10px;">
 
-<input type="tel" placeholder="Phone Number"
-style="width:100%;padding:12px;margin-top:10px;"
-maxlength="10" required>
+<input type="tel" placeholder="Phone Number" maxlength="10" required
 style="width:100%;padding:12px;margin-top:10px;">
 
-<input type="password" placeholder="Password"
+<input type="password" placeholder="Password" required
 style="width:100%;padding:12px;margin-top:10px;">
 
-<input type="password" placeholder="Confirm Password"
+<input type="password" placeholder="Confirm Password" required
 style="width:100%;padding:12px;margin-top:10px;">
 
-<a href="dashboard.html">
-<button style="width:100%;padding:12px;margin-top:20px;background:#00d084;color:white;border:none;border-radius:8px;">
+<button type="submit"
+style="width:100%;padding:12px;margin-top:20px;background:#00d084;color:white;border:none;border-radius:8px;">
 Create Account
 </button>
-</a>
+
+</form>
 
 <p style="text-align:center;margin-top:15px;">
 Already have an account?
 <a href="login.html">Login</a>
 </p>
+
+</div>
+
+</body>
+</html>
