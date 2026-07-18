@@ -1,31 +1,29 @@
-*{
+body{
 margin:0;
 padding:0;
-box-sizing:border-box;
 font-family:Arial,sans-serif;
-}
-
-body{
-background:#0b1320;
+background:#0f172a;
 color:white;
 }
 
-header{
+.header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
+padding:15px 20px;
 background:#111827;
 }
 
-header h1{
+.header h1{
+margin:0;
+font-size:24px;
 color:#00d084;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:15px;
 font-weight:bold;
 }
 
@@ -35,40 +33,25 @@ padding:60px 20px;
 }
 
 .hero h2{
-font-size:36px;
-margin-bottom:15px;
+font-size:32px;
+margin-bottom:10px;
 }
 
 .hero p{
-color:#ccc;
-margin-bottom:20px;
+font-size:18px;
+color:#cbd5e1;
 }
 
-.hero button{
-padding:12px 30px;
+.btn{
 background:#00d084;
-color:#fff;
+color:white;
 border:none;
+padding:12px 24px;
+margin:10px;
 border-radius:8px;
-font-size:18px;
+font-size:16px;
 cursor:pointer;
 }
 
-.matches{
-padding:30px;
-}
-
-.matches h2{
-margin-bottom:20px;
-}
-
-.card{
-background:#1f2937;
-padding:20px;
-border-radius:10px;
-margin-bottom:15px;
-}
-
-footer{
-text-align:center;
-padding:20px;
+.btn:hover{
+background:#
