@@ -1,1 +1,3 @@
-console.log("Titanexchange loaded successfully!");
+function showMessage() {
+  alert("Welcome to Titanexchange!");
+}
