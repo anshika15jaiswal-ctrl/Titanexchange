@@ -1,19 +1,74 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  text-align: center;
-  padding: 50px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-h1 {
-  color: #0077cc;
+body{
+background:#0b1320;
+color:white;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 5px;
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#111827;
 }
+
+header h1{
+color:#00d084;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h2{
+font-size:36px;
+margin-bottom:15px;
+}
+
+.hero p{
+color:#ccc;
+margin-bottom:20px;
+}
+
+.hero button{
+padding:12px 30px;
+background:#00d084;
+color:#fff;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+}
+
+.matches{
+padding:30px;
+}
+
+.matches h2{
+margin-bottom:20px;
+}
+
+.card{
+background:#1f2937;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+footer{
+text-align:center;
+padding:20px;
