@@ -1,4 +1,4 @@
-const API_KEY = "YAHAN_APNI_API_KEY_PASTE_KARO";
+const API_KEY = "8ff5866e-f100-46ca-a8e8-........";
 
 async function loadMatches() {
   const url = `https://api.cricketdata.org/v1/matches?apikey=${API_KEY}`;
