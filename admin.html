@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Panel - Titan Exchange</title>
+<title>Titan Exchange Admin</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,13 +18,11 @@
 
 <h2>Admin Panel</h2>
 
-<label>User ID</label>
-<input type="text" id="userid" placeholder="TX10001">
+<label>User ID</label><br>
+<input type="text" id="userid" placeholder="TX10001"><br><br>
 
-<label>Coins</label>
-<input type="number" id="coins" placeholder="1000">
-
-<br><br>
+<label>Coins</label><br>
+<input type="number" id="coins" placeholder="1000"><br><br>
 
 <button class="btn" onclick="addCoins()">➕ Add Coins</button>
 
@@ -38,33 +37,7 @@
 
 </div>
 
-<script>
-
-let balance = 1000;
-
-function addCoins(){
-
-let amount = Number(document.getElementById("coins").value);
-
-balance += amount;
-
-document.getElementById("balance").innerHTML = balance + " Coins";
-
-}
-
-function removeCoins(){
-
-let amount = Number(document.getElementById("coins").value);
-
-balance -= amount;
-
-if(balance<0) balance=0;
-
-document.getElementById("balance").innerHTML = balance + " Coins";
-
-}
-
-</script>
+<script src="admin.js"></script>
 
 </body>
 </html>
