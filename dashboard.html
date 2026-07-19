@@ -5,47 +5,94 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Titan Exchange Dashboard</title>
 <link rel="stylesheet" href="style.css">
+<script src="Live.js" defer></script>
 </head>
 
 <body>
 
-<header>
-<h1>🏏 Titan Exchange</h1>
-</header>
+<header class="header">
 
-<div style="padding:20px;">
-
-<h2>Dashboard</h2>
-
-<div class="card">
-<h2 style="color:#00d084;">
-💰 Wallet: <span id="coins">1000</span> Coins
-</h2>
-
-<p>Status: Active 🟢</p>
-<p>User ID: TX10001</p>
+<div class="logo">
+🏏 Titan Exchange
 </div>
 
-<div class="card">
-<h2>🏏 Live Matches</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="login.html">Logout</a>
+</nav>
+
+</header>
+
+<section class="wallet">
+
+<div class="wallet-card">
+<h3>💰 Wallet</h3>
+<h1 id="coins">1000</h1>
+<p>Demo Coins</p>
+</div>
+
+<div class="wallet-card">
+<h3>📥 Deposit</h3>
+<p>Coming Soon</p>
+</div>
+
+<div class="wallet-card">
+<h3>📤 Withdraw</h3>
+<p>Coming Soon</p>
+</div>
+
+</section>
+
+<section class="menu">
+
+<div class="menu-box">🏏 Cricket</div>
+<div class="menu-box">⚽ Football</div>
+<div class="menu-box">🎰 Casino</div>
+<div class="menu-box">✈️ Aviator</div>
+<div class="menu-box">🎲 Slots</div>
+<div class="menu-box">👤 Profile</div>
+
+</section>
+
+<section class="card">
+
+<h2>🔥 Live Cricket Matches</h2>
 
 <div id="liveMatches">
 Loading Live Matches...
 </div>
-</div>
 
-<div class="card">
-<h2>Profile</h2>
+</section>
 
-<p>Name: User</p>
-<p>Phone: +91 XXXXXXXXXX</p>
-<p>User ID: TX10001</p>
-<p>Status: Active 🟢</p>
-</div>
+<section class="card">
 
-</div>
+<h2>👤 User Profile</h2>
 
-<script src="Live.js"></script>
+<p><b>Name:</b> User</p>
+<p><b>User ID:</b> TX10001</p>
+<p><b>Phone:</b> +91 XXXXXXXXXX</p>
+<p><b>Status:</b> 🟢 Active</p>
+
+</section>
+
+<section class="card">
+
+<h2>📜 Recent Activity</h2>
+
+<ul>
+<li>🪙 Account Created</li>
+<li>💰 1000 Demo Coins Added</li>
+<li>🏏 Ready To Play</li>
+</ul>
+
+</section>
+
+<footer>
+
+© 2026 Titan Exchange
+
+</footer>
 
 </body>
 </html>
