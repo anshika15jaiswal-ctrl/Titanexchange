@@ -5,7 +5,9 @@ async function loadMatches() {
   container.innerHTML = "Loading live matches...";
 
   try {
-    const response = await fetch(`https://api.cricketdata.org/v1/matches?apikey=${API_KEY}`);
+    const response = await fetch(`https://api.cricketdata.org/v1/matches?apikey=${API_KEY}`, {
+  method: "GET"
+});
     const result = await response.json();
 
     console.log(result);
