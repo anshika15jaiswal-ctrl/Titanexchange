@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard</title>
+<title>Titan Exchange Dashboard</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-<h1>Titan Exchange</h1>
+<h1>🏏 Titan Exchange</h1>
 </header>
 
 <div style="padding:20px;">
@@ -17,40 +18,34 @@
 <h2>Dashboard</h2>
 
 <div class="card">
-<h2 style="color:#00d084;">💰 Wallet: <span id="coins">1000</span> Coins</h2>
+<h2 style="color:#00d084;">
+💰 Wallet: <span id="coins">1000</span> Coins
+</h2>
+
 <p>Status: Active 🟢</p>
- <p>User ID: TX10001</p>
-  
+<p>User ID: TX10001</p>
 </div>
 
 <div class="card">
-<h3>Today's Matches</h3>
+<h2>🏏 Live Matches</h2>
 
-<p>🏏 India vs Australia</p>
-<p>Status: Live</p>
-
-<hr>
-
-<p>🏏 England vs Pakistan</p>
-<p>Status: Upcoming</p>
-
-<hr>
-
-<p>🏏 South Africa vs New Zealand</p>
-<p>Status: Upcoming</p>
-
+<div id="liveMatches">
+Loading Live Matches...
+</div>
 </div>
 
 <div class="card">
-<h3>Profile</h3>
+<h2>Profile</h2>
+
 <p>Name: User</p>
 <p>Phone: +91 XXXXXXXXXX</p>
 <p>User ID: TX10001</p>
-<p>Coins: 🪙 1000</p>
 <p>Status: Active 🟢</p>
 </div>
 
 </div>
+
+<script src="Live.js"></script>
 
 </body>
 </html>
