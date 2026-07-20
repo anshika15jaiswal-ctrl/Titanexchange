@@ -3,68 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard - Titan Exchange</title>
+<title>Titan Exchange Dashboard</title>
 
-<link rel="stylesheet" href="style.css">
-<script src="Live.js" defer></script>
+<style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#0b0b0b;
+color:#fff;
+}
+
+header{
+background:#171717;
+border-bottom:3px solid #ffd21f;
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#fff;
+}
+
+.logo span{
+color:#ffd21f;
+}
+
+nav{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ffd21f;
+}
+
+.container{
+width:95%;
+max-width:900px;
+margin:auto;
+padding:25px 0;
+}
+
+.card{
+background:#1b1b1b;
+border:1px solid #444;
+border-radius:20px;
+padding:25px;
+margin-bottom:25px;
+}
+
+.title{
+font-size:22px;
+font-weight:bold;
+color:#ffd21f;
+margin-bottom:20px;
+}
+
+.balance{
+font-size:60px;
+font-weight:bold;
+}
+
+.small{
+font-size:30px;
+color:#ddd;
+}
+  </style>
 </head>
 
 <body>
 
-<header class="header">
+<header>
 
-<h1>🏏 Titan Exchange</h1>
+<div class="logo">
+🏏 <span>Titan</span> Exchange
+</div>
 
 <nav>
 <a href="index.html">Home</a>
 <a href="dashboard.html">Dashboard</a>
-<a href="login.html">Logout</a>
+<a href="logout.html">Logout</a>
 </nav>
 
 </header>
 
-<section class="card">
+<div class="container">
 
-<h2>💰 Wallet</h2>
+<!-- Wallet -->
 
-<h1 id="coins">1000</h1>
+<div class="card">
 
-<p>Demo Coins</p>
+<div class="title">💰 Wallet</div>
 
-</section>
+<div class="balance" id="walletBalance">
+1000
+</div>
 
-<section class="card">
-
-<h2>👤 User Profile</h2>
-
-<p><b>Name :</b> <span id="name"></span></p>
-
-<p><b>User ID :</b> <span id="userid"></span></p>
-
-<p><b>Phone :</b> <span id="phone"></span></p>
-
-<p><b>Status :</b> 🟢 Active</p>
-
-</section>
-
-<section class="card">
-
-<h2>🏏 Live Cricket Matches</h2>
-
-<div id="liveMatches">
-
-Loading Live Matches...
+<div class="small">
+Demo Coins
+</div>
 
 </div>
 
-</section>
+<!-- User Profile -->
 
-<section class="card">
+<div class="card">
 
-<h2>📜 Recent Activity</h2>
+<div class="title">
+👤 User Profile
+</div>
 
-<ul>
+<p><b>Name :</b> <span id="userName">Yuvi Gulshan</span></p>
+<br>
+
+<p><b>User ID :</b> <span id="userId">TX33248</span></p>
+<br>
+
+<p><b>Phone :</b> <span id="userPhone">9504106706</span></p>
+<br>
+
+<p><b>Status :</b>
+🟢 Active
+</p>
+
+</div>
+
+  <!-- Live Cricket Matches -->
+
+<div class="card">
+
+<div class="title">
+🏏 Live Cricket Matches
+</div>
+
+<div id="liveMatches">
+API Error
+</div>
+
+</div>
+
+<!-- Recent Activity -->
+
+<div class="card">
+
+<div class="title">
+📜 Recent Activity
+</div>
+
+<ul style="padding-left:25px;line-height:2;font-size:22px;">
 
 <li>✅ Account Created</li>
 
@@ -74,33 +179,58 @@ Loading Live Matches...
 
 </ul>
 
-</section>
+</div>
 
-<footer>
+</div>
 
-<p>© 2026 Titan Exchange</p>
-
+<footer style="
+text-align:center;
+padding:25px;
+font-size:18px;
+color:#bbb;
+">
+© 2026 Titan Exchange
 </footer>
 
 <script>
 
-let user = JSON.parse(localStorage.getItem("user"));
+document.getElementById("userName").innerHTML =
+localStorage.getItem("name") || "Guest";
 
-if(user){
+document.getElementById("userPhone").innerHTML =
+localStorage.getItem("phone") || "Not Available";
 
-document.getElementById("name").innerHTML = user.name;
+document.getElementById("userId").innerHTML =
+localStorage.getItem("userid") || "TX00000";
 
-document.getElementById("userid").innerHTML = user.userId;
+document.getElementById("walletBalance").innerHTML =
+localStorage.getItem("wallet") || "1000";
+  localStorage.setItem(
+"wallet",
+localStorage.getItem("wallet") || "1000"
+);
 
-document.getElementById("phone").innerHTML = user.phone;
+// Dummy Live Match
+document.getElementById("liveMatches").innerHTML = `
+<div style="
+padding:15px;
+border:1px solid #555;
+border-radius:12px;
+margin-top:10px;
+">
 
-document.getElementById("coins").innerHTML = user.coins;
+<h3>India 🇮🇳 vs Australia 🇦🇺</h3>
 
-}else{
+<p style="margin-top:10px;">
+India 154/3 (16.2 Overs)
+</p>
 
-window.location = "login.html";
+<p style="color:#ffd21f;">
+Live
+</p>
 
-}
+</div>
+`;
 
 </script>
 
