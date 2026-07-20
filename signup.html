@@ -28,29 +28,38 @@
 Create Account
 </button>
 
+<p style="margin-top:20px;">
+Already have an account?
+<a href="login.html">Login</a>
+</p>
+
 </div>
 
 <script>
 
 function signup(){
 
-let user={
+const userId = "TX" + Math.floor(10000 + Math.random() * 90000);
 
-name:document.getElementById("name").value,
+let user = {
 
-phone:document.getElementById("phone").value,
+userId: userId,
 
-password:document.getElementById("password").value,
+name: document.getElementById("name").value,
 
-coins:1000
+phone: document.getElementById("phone").value,
+
+password: document.getElementById("password").value,
+
+coins: 1000
 
 };
 
-localStorage.setItem("user",JSON.stringify(user));
+localStorage.setItem("user", JSON.stringify(user));
 
-alert("Account Created Successfully!");
+alert("Account Created!\n\nYour User ID: " + userId);
 
-window.location="login.html";
+window.location = "login.html";
 
 }
 
