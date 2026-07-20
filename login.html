@@ -4,45 +4,55 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login - Titan Exchange</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<h1>Titan Exchange</h1>
+<header class="header">
+<h1>🏏 Titan Exchange</h1>
 </header>
 
-<div style="max-width:400px;margin:60px auto;background:#1f2937;padding:20px;border-radius:10px;">
+<div class="card">
 
-<h2 style="text-align:center;">Login</h2>
+<h2>Login</h2>
 
-<form action="dashboard.html">
+<input type="text" id="phone" placeholder="Phone Number"><br><br>
 
-<input type="tel"
-placeholder="Phone Number"
-maxlength="10"
-required
-style="width:100%;padding:12px;margin-top:15px;">
+<input type="password" id="password" placeholder="Password"><br><br>
 
-<input type="password"
-placeholder="Password"
-required
-style="width:100%;padding:12px;margin-top:15px;">
-
-<button type="submit"
-style="width:100%;padding:12px;margin-top:20px;background:#00d084;color:white;border:none;border-radius:8px;">
+<button class="btn" onclick="login()">
 Login
 </button>
 
-</form>
-
-<p style="text-align:center;margin-top:15px;">
-Don't have an account?
-<a href="signup.html">Sign Up</a>
-</p>
-
 </div>
+
+<script>
+
+function login(){
+
+let user = JSON.parse(localStorage.getItem("user"));
+
+let phone = document.getElementById("phone").value;
+
+let password = document.getElementById("password").value;
+
+if(user && phone===user.phone && password===user.password){
+
+alert("Login Successful");
+
+window.location="dashboard.html";
+
+}else{
+
+alert("Wrong Phone Number or Password");
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
