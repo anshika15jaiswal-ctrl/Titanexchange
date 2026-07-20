@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Titan Exchange Dashboard</title>
+<title>Dashboard - Titan Exchange</title>
+
 <link rel="stylesheet" href="style.css">
 <script src="Live.js" defer></script>
+
 </head>
 
 <body>
 
 <header class="header">
 
-<div class="logo">
-🏏 Titan Exchange
-</div>
+<h1>🏏 Titan Exchange</h1>
 
 <nav>
 <a href="index.html">Home</a>
@@ -24,44 +24,13 @@
 
 </header>
 
-<section class="wallet">
-
-<div class="wallet-card">
-<h3>💰 Wallet</h3>
-<h1 id="coins">1000</h1>
-<p>Demo Coins</p>
-</div>
-
-<div class="wallet-card">
-<h3>📥 Deposit</h3>
-<p>Coming Soon</p>
-</div>
-
-<div class="wallet-card">
-<h3>📤 Withdraw</h3>
-<p>Coming Soon</p>
-</div>
-
-</section>
-
-<section class="menu">
-
-<div class="menu-box">🏏 Cricket</div>
-<div class="menu-box">⚽ Football</div>
-<div class="menu-box">🎰 Casino</div>
-<div class="menu-box">✈️ Aviator</div>
-<div class="menu-box">🎲 Slots</div>
-<div class="menu-box">👤 Profile</div>
-
-</section>
-
 <section class="card">
 
-<h2>🔥 Live Cricket Matches</h2>
+<h2>💰 Wallet</h2>
 
-<div id="liveMatches">
-Loading Live Matches...
-</div>
+<h1 id="coins">1000</h1>
+
+<p>Demo Coins</p>
 
 </section>
 
@@ -69,10 +38,25 @@ Loading Live Matches...
 
 <h2>👤 User Profile</h2>
 
-<p><b>Name:</b> User</p>
-<p><b>User ID:</b> TX10001</p>
-<p><b>Phone:</b> +91 XXXXXXXXXX</p>
-<p><b>Status:</b> 🟢 Active</p>
+<p><b>Name :</b> <span id="name"></span></p>
+
+<p><b>User ID :</b> <span id="userid"></span></p>
+
+<p><b>Phone :</b> <span id="phone"></span></p>
+
+<p><b>Status :</b> 🟢 Active</p>
+
+</section>
+
+<section class="card">
+
+<h2>🏏 Live Cricket Matches</h2>
+
+<div id="liveMatches">
+
+Loading Live Matches...
+
+</div>
 
 </section>
 
@@ -81,18 +65,44 @@ Loading Live Matches...
 <h2>📜 Recent Activity</h2>
 
 <ul>
-<li>🪙 Account Created</li>
+
+<li>✅ Account Created</li>
+
 <li>💰 1000 Demo Coins Added</li>
+
 <li>🏏 Ready To Play</li>
+
 </ul>
 
 </section>
 
 <footer>
 
-© 2026 Titan Exchange
+<p>© 2026 Titan Exchange</p>
 
 </footer>
+
+<script>
+
+let user = JSON.parse(localStorage.getItem("user"));
+
+if(user){
+
+document.getElementById("name").innerHTML = user.name;
+
+document.getElementById("userid").innerHTML = user.userId;
+
+document.getElementById("phone").innerHTML = user.phone;
+
+document.getElementById("coins").innerHTML = user.coins;
+
+}else{
+
+window.location = "login.html";
+
+}
+
+</script>
 
 </body>
 </html>
