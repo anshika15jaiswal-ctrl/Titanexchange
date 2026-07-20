@@ -1,43 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Titan Exchange Admin</title>
+
+<title>Titan Exchange Dashboard</title>
 
 <link rel="stylesheet" href="style.css">
+<script src="Live.js" defer></script>
+
 </head>
 
 <body>
 
 <header class="header">
-<h1>👑 Titan Exchange Admin</h1>
+
+<div class="logo">
+🏏 Titan Exchange
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="login.html">Logout</a>
+</nav>
+
 </header>
 
-<div class="card">
+<section class="card">
 
-<h2>Admin Panel</h2>
+<h2>💰 Wallet</h2>
 
-<label>User ID</label><br>
-<input type="text" id="userid" placeholder="TX10001"><br><br>
+<h1 id="coins">1000</h1>
 
-<label>Coins</label><br>
-<input type="number" id="coins" placeholder="1000"><br><br>
+<p>Demo Coins</p>
 
-<button class="btn" onclick="addCoins()">➕ Add Coins</button>
+</section>
 
-<button class="btn" onclick="removeCoins()">➖ Remove Coins</button>
+<section class="card">
+
+<h2>👤 User Profile</h2>
+
+<p><b>Name :</b>
+<span id="name"></span>
+</p>
+
+<p><b>User ID :</b>
+<span id="userid"></span>
+</p>
+
+<p><b>Phone :</b>
+<span id="phone"></span>
+</p>
+
+<p><b>Status :</b>
+🟢 Active
+</p>
+
+</section>
+<section class="card">
+
+<h2>🏏 Live Cricket Matches</h2>
+
+<div id="liveMatches">
+Loading Live Matches...
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>🎮 Games</h2>
+
+<div class="menu">
+
+<div class="menu-box">🏏 Cricket</div>
+
+<div class="menu-box">⚽ Football</div>
+
+<div class="menu-box">🎰 Casino</div>
+
+<div class="menu-box">✈️ Aviator</div>
+
+<div class="menu-box">🎰 Slots</div>
+
+<div class="menu-box">🎲 Teen Patti</div>
 
 </div>
 
-<div class="card">
-<h2>User Balance</h2>
+</section>
 
-<h1 id="balance">1000 Coins</h1>
+<section class="card">
 
-</div>
+<h2>📜 Recent Activity</h2>
 
-<script src="admin.js"></script>
+<ul>
+
+<li>✅ Account Created Successfully</li>
+
+<li>💰 1000 Demo Coins Added</li>
+
+<li>🏏 Ready To Play</li>
+
+</ul>
+
+</section>
+<section class="card">
+
+<h2>ℹ️ Account Details</h2>
+
+<p><b>Platform:</b> Titan Exchange</p>
+
+<p><b>Account Type:</b> Demo</p>
+
+<p><b>Wallet Status:</b> Active 🟢</p>
+
+<p><b>Version:</b> 1.0</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Titan Exchange</p>
+
+</footer>
+
+<script>
+
+let user = JSON.parse(localStorage.getItem("user"));
+
+if(user){
+
+document.getElementById("name").innerHTML = user.name;
+
+document.getElementById("userid").innerHTML = user.userId;
+
+document.getElementById("phone").innerHTML = user.phone;
+
+document.getElementById("coins").innerHTML = user.coins;
+
+}else{
+
+window.location.href = "login.html";
+
+}
+  </script>
 
 </body>
+
 </html>
